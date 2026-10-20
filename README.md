@@ -54,6 +54,16 @@ La suite imprime el resumen; el programa devuelve cero incluso si algún caso fa
 
 Para abrir el menú interactivo, ejecuta `./build/uocoworking` desde `UOCCoworkingPr2`, donde se encuentran los archivos de datos.
 
+## Comprobación automática del resultado
+
+La rama `master` incluye [`tools/check_pr2.py`](https://github.com/Rpfdeveloper/programmingFundamentalsUOC/blob/master/tools/check_pr2.py). Desde la raíz de la copia de esa rama, con Python 3 y GCC:
+
+```bash
+python3 tools/check_pr2.py
+```
+
+Compila la práctica final en una carpeta temporal y exige un único resumen con **45 de 45 pruebas superadas**. Si falla la compilación, la ejecución o el resumen, devuelve un código de error. Así evita que el código cero del programa académico oculte un test fallido. El workflow [C practice validation](https://github.com/Rpfdeveloper/programmingFundamentalsUOC/actions), incluido en `master`, automatiza esta comprobación.
+
 ## Estado y límites
 
 - La práctica final compila y supera sus **45 pruebas académicas existentes** en el entorno descrito.
